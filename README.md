@@ -45,6 +45,22 @@ demo-service LoadBalancer 10.109.28.88 127.0.0.1 80:32585/TCP 11m
 NAME READY STATUS RESTARTS AGE<br/>
 pod-info-deployment-554c495857-dgl5r 1/1 Running 0 115s
 
+## To get deployments
+CMD: kubectl get deployments
+Result:
+NAME             READY   UP-TO-DATE   AVAILABLE   AGE
+deployment-name   1/1     1            1           4s
+
+## To get pods
+CMD: kubectl get pods
+Result:
+NAME                              READY   STATUS    RESTARTS   AGE
+deployment-name-6fd48d96b6-f87dh   1/1     Running   0          3s
+
+# To delete a deployment
+CMD: kubectl delete deployment deployment-name
+Result: deployment.apps "deployment-name" deleted
+
 ## To delete a service in a namespace
 
 <span style="color:yellow;">CMD:</span> kubectl delete service demo-service -n development<br/>
@@ -72,11 +88,3 @@ pod-info-deployment-554c495857-dgl5r 1/1 Running 0 115s
 ## To scan a script file (ex: deployment.yaml)
 
 <span style="color:yellow;">CMD:</span> snyk iac test deployment.yaml
-
-## To get deployments
-
-CMD: kubectl get deployments
-
-## To get pods
-
-CMD: kubectl get pods

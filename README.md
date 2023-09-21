@@ -72,3 +72,11 @@ pod-info-deployment-554c495857-dgl5r 1/1 Running 0 115s
 ## To scan a script file (ex: deployment.yaml)
 
 <span style="color:yellow;">CMD:</span> snyk iac test deployment.yaml
+
+## To get deployments
+
+CMD: kubectl get deployments
+
+## To get pods
+
+CMD: kubectl get pods

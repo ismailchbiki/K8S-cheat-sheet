@@ -46,19 +46,19 @@ NAME READY STATUS RESTARTS AGE<br/>
 pod-info-deployment-554c495857-dgl5r 1/1 Running 0 115s
 
 ## To get deployments
-CMD: kubectl get deployments
-Result:
-NAME             READY   UP-TO-DATE   AVAILABLE   AGE
+CMD: kubectl get deployments<br/>
+Result:<br/>
+NAME             READY   UP-TO-DATE   AVAILABLE   AGE<br/>
 deployment-name   1/1     1            1           4s
 
 ## To get pods
-CMD: kubectl get pods
-Result:
-NAME                              READY   STATUS    RESTARTS   AGE
+CMD: kubectl get pods<br/>
+Result:<br/>
+NAME                              READY   STATUS    RESTARTS   AGE<br/>
 deployment-name-6fd48d96b6-f87dh   1/1     Running   0          3s
 
 # To delete a deployment
-CMD: kubectl delete deployment deployment-name
+CMD: kubectl delete deployment deployment-name<br/>
 Result: deployment.apps "deployment-name" deleted
 
 ## To delete a service in a namespace
